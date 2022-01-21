@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  padding: 2em;
+}
+
+main .card {
+  width: 19em;
+  padding: 3em 2em 4em;
+}
+
+main .card div {
+  margin: 0.8em 0;
+  font-size: 2.5em;
+  font-family: "Big Shoulders Display";
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+main .sedans {
+  border-radius: 0.5em 0.5em 0 0;
+  background-color: #e38826;
+}
+
+main .sedans a {
+  color: #e38826;
+}
+
+main .suvs {
+  background-color: #006970;
+}
+
+main .suvs a {
+  color: #006970;
+}
+
+main .luxury {
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: #004241;
+}
+
+main .luxury a {
+  color: #004241;
+}
+
+main p {
+  font-family: "Lexend Deca";
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 2.5em;
+  line-height: 1.5em;
+}
+
+main a {
+  font-family: "Lexend Deca";
+  background-color: #f2f2f2;
+  text-decoration: none;
+  padding: 1em 2em;
+  border-radius: 2em;
+}
+
+main a:hover {
+  background-color: transparent;
+  border: rgba(255, 255, 255, 0.75) 2px solid;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+}
+
+footer a {
+  color: #3e52a3;
+  text-decoration: none;
+}
+
+@media (min-width: 940px) {
+  body {
+    height: 100vh;
+  }
+  body main {
+    padding: 0;
+    background-color: #f2f2f2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  body p {
+    margin-bottom: 6em;
+  }
+  body .sedans {
+    border-radius: 1em 0 0 1em;
+  }
+  body .luxury {
+    border-radius: 0 1em 1em 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

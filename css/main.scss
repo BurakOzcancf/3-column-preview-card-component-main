@@ -1,0 +1,108 @@
+//Colors--
+//Primary
+$BrightOrange: hsl(31, 77%, 52%);
+$DarkCyan: hsl(184, 100%, 22%);
+$VeryDarkCyan: hsl(179, 100%, 13%);
+//Neutral
+$TransparentWhite: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$VeryLightGray: hsl(0, 0%, 95%); //(background, headings, buttons)
+
+//Font
+$fontSizeBody: 1em;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $VeryLightGray;
+  font-size: $fontSizeBody;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  padding: 2em;
+  .card {
+    width: 19em;
+    padding: 3em 2em 4em;
+    div {
+      margin: 0.8em 0;
+      font-size: 2.5em;
+      font-family: "Big Shoulders Display";
+      color: $VeryLightGray;
+      text-transform: uppercase;
+    }
+  }
+  .sedans {
+    border-radius: 0.5em 0.5em 0 0;
+    background-color: $BrightOrange;
+    a {
+      color: $BrightOrange;
+    }
+  }
+  .suvs {
+    background-color: $DarkCyan;
+    a {
+      color: $DarkCyan;
+    }
+  }
+  .luxury {
+    border-radius: 0 0 0.5em 0.5em;
+    background-color: $VeryDarkCyan;
+    a {
+      color: $VeryDarkCyan;
+    }
+  }
+
+  p {
+    font-family: "Lexend Deca";
+    color: $TransparentWhite;
+    margin-bottom: 2.5em;
+    line-height: 1.5em;
+  }
+  a {
+    font-family: "Lexend Deca";
+    background-color: $VeryLightGray;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 2em;
+  }
+  a:hover {
+    background-color: transparent;
+    border: $TransparentWhite 2px solid;
+    color: $TransparentWhite;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 940px) {
+  body {
+    height: 100vh;
+    main {
+      padding: 0;
+      background-color: $VeryLightGray;
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+    p {
+      margin-bottom: 6em;
+    }
+    .sedans {
+      border-radius: 1em 0 0 1em;
+    }
+    .luxury {
+      border-radius: 0 1em 1em 0;
+    }
+  }
+}
