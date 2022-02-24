@@ -1,3 +1,12 @@
+@charset "UTF-8";
+:root {
+  --Bright-Orange: hsl(31, 77%, 52%);
+  --Dark-Cyan: hsl(184, 100%, 22%);
+  --Very-Dark-Cyan: hsl(179, 100%, 13%);
+  --Transparent-White: hsla(0, 0%, 100%, 0.75);
+  --Very-Light-Gray: hsl(0, 0%, 95%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +14,22 @@
           box-sizing: border-box;
 }
 
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
 body {
-  background-color: #f2f2f2;
+  background-color: var(--Very-Light-Gray);
   font-size: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,6 +44,51 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+body::after {
+  content: "Coded by Burak Özcan";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  font-family: Lexend Deca;
+  font-size: 3rem;
+  color: var(--Transparent-White);
+  height: 100%;
+  padding-top: 10rem;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+  background-color: var(--Very-Dark-Cyan);
+  -webkit-animation: creator 5s forwards;
+          animation: creator 5s forwards;
+}
+
+@-webkit-keyframes creator {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes creator {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
 }
 
 main {
@@ -32,59 +100,59 @@ main .card {
   padding: 3em 2em 4em;
 }
 
-main .card div {
+main .card .card__title {
   margin: 0.8em 0;
   font-size: 2.5em;
   font-family: "Big Shoulders Display";
-  color: #f2f2f2;
+  color: var(--Very-Light-Gray);
   text-transform: uppercase;
 }
 
-main .sedans {
+main .card__sedans {
   border-radius: 0.5em 0.5em 0 0;
-  background-color: #e38826;
+  background-color: var(--Bright-Orange);
 }
 
-main .sedans a {
-  color: #e38826;
+main .card__sedans .card__button {
+  color: var(--Bright-Orange);
 }
 
-main .suvs {
-  background-color: #006970;
+main .card__suvs {
+  background-color: var(--Dark-Cyan);
 }
 
-main .suvs a {
-  color: #006970;
+main .card__suvs .card__button {
+  color: var(--Dark-Cyan);
 }
 
-main .luxury {
+main .card__luxury {
   border-radius: 0 0 0.5em 0.5em;
-  background-color: #004241;
+  background-color: var(--Very-Dark-Cyan);
 }
 
-main .luxury a {
-  color: #004241;
+main .card__luxury .card__button {
+  color: var(--Very-Dark-Cyan);
 }
 
-main p {
+main .card__description {
   font-family: "Lexend Deca";
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--Transparent-White);
   margin-bottom: 2.5em;
   line-height: 1.5em;
 }
 
-main a {
+main .card__button {
   font-family: "Lexend Deca";
-  background-color: #f2f2f2;
+  background-color: var(--Very-Light-Gray);
   text-decoration: none;
   padding: 1em 2em;
   border-radius: 2em;
 }
 
-main a:hover {
+main .card__button:hover {
   background-color: transparent;
-  border: rgba(255, 255, 255, 0.75) 2px solid;
-  color: rgba(255, 255, 255, 0.75);
+  border: var(--Transparent-White) 2px solid;
+  color: var(--Transparent-White);
 }
 
 footer {
@@ -103,19 +171,19 @@ footer a {
   }
   body main {
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: var(--Very-Light-Gray);
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
   }
-  body p {
+  body .card__description {
     margin-bottom: 6em;
   }
-  body .sedans {
+  body .card__sedans {
     border-radius: 1em 0 0 1em;
   }
-  body .luxury {
+  body .card__luxury {
     border-radius: 0 1em 1em 0;
   }
 }

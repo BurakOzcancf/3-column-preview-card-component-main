@@ -1,13 +1,12 @@
-//Colors--
-//Primary
-$BrightOrange: hsl(31, 77%, 52%);
-$DarkCyan: hsl(184, 100%, 22%);
-$VeryDarkCyan: hsl(179, 100%, 13%);
-//Neutral
-$TransparentWhite: hsla(0, 0%, 100%, 0.75); //(paragraphs)
-$VeryLightGray: hsl(0, 0%, 95%); //(background, headings, buttons)
+:root {
+  --Bright-Orange: hsl(31, 77%, 52%);
+  --Dark-Cyan: hsl(184, 100%, 22%);
+  --Very-Dark-Cyan: hsl(179, 100%, 13%);
+  --Transparent-White: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+  --Very-Light-Gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+}
 
-//Font
+//Font-size
 $fontSizeBody: 1em;
 
 * {
@@ -15,65 +14,105 @@ $fontSizeBody: 1em;
   padding: 0;
   box-sizing: border-box;
 }
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
 body {
-  background-color: $VeryLightGray;
+  background-color: var(--Very-Light-Gray);
   font-size: $fontSizeBody;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+}
+body::after {
+  content: "Coded by Burak Özcan";
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-family: Lexend Deca;
+  font-size: 3rem;
+  color: var(--Transparent-White);
+  height: 100%;
+  padding-top: 10rem;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+  background-color: var(--Very-Dark-Cyan);
+  animation: creator 5s forwards;
+}
+@keyframes creator {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
 }
 main {
   padding: 2em;
   .card {
     width: 19em;
     padding: 3em 2em 4em;
-    div {
+    .card__title {
       margin: 0.8em 0;
       font-size: 2.5em;
       font-family: "Big Shoulders Display";
-      color: $VeryLightGray;
+      color: var(--Very-Light-Gray);
       text-transform: uppercase;
     }
   }
-  .sedans {
+  .card__sedans {
     border-radius: 0.5em 0.5em 0 0;
-    background-color: $BrightOrange;
-    a {
-      color: $BrightOrange;
+    background-color: var(--Bright-Orange);
+    .card__button {
+      color: var(--Bright-Orange);
     }
   }
-  .suvs {
-    background-color: $DarkCyan;
-    a {
-      color: $DarkCyan;
+  .card__suvs {
+    background-color: var(--Dark-Cyan);
+    .card__button {
+      color: var(--Dark-Cyan);
     }
   }
-  .luxury {
+  .card__luxury {
     border-radius: 0 0 0.5em 0.5em;
-    background-color: $VeryDarkCyan;
-    a {
-      color: $VeryDarkCyan;
+    background-color: var(--Very-Dark-Cyan);
+    .card__button {
+      color: var(--Very-Dark-Cyan);
     }
   }
 
-  p {
+  .card__description {
     font-family: "Lexend Deca";
-    color: $TransparentWhite;
+    color: var(--Transparent-White);
     margin-bottom: 2.5em;
     line-height: 1.5em;
   }
-  a {
+  .card__button {
     font-family: "Lexend Deca";
-    background-color: $VeryLightGray;
+    background-color: var(--Very-Light-Gray);
     text-decoration: none;
     padding: 1em 2em;
     border-radius: 2em;
   }
-  a:hover {
+  .card__button:hover {
     background-color: transparent;
-    border: $TransparentWhite 2px solid;
-    color: $TransparentWhite;
+    border: var(--Transparent-White) 2px solid;
+    color: var(--Transparent-White);
   }
 }
 
@@ -91,17 +130,17 @@ footer {
     height: 100vh;
     main {
       padding: 0;
-      background-color: $VeryLightGray;
+      background-color: var(--Very-Light-Gray);
       display: grid;
       grid-template-columns: auto auto auto;
     }
-    p {
+    .card__description {
       margin-bottom: 6em;
     }
-    .sedans {
+    .card__sedans {
       border-radius: 1em 0 0 1em;
     }
-    .luxury {
+    .card__luxury {
       border-radius: 0 1em 1em 0;
     }
   }
