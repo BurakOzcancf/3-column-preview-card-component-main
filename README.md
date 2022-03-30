@@ -25,7 +25,7 @@ Hello! This is my solution to the 3-column preview card component challenge. Thi
 
 - [LIVE PREVIEW](https://burakozcancf.github.io/3-column-preview-card-component-main/)
 
-- [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-)
+- [Frontend Mentor](https://www.frontendmentor.io/)
 
 - [Contributing Guide](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)
 
