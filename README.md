@@ -43,10 +43,13 @@ Hello! This is my solution to the 3-column preview card component challenge. Thi
 - Mobile-first workflow
 - CSS flex
 - CSS grid
-- Used the :root pseudo-class to declare global CSS variables
 - used rem unit to make relative font-size to the root element
-- To make it nicer added basic animation and hovers.
-- Added Focus-visible to navigate with TAB
+- Used Pseudo Elements
+- Used Pseudo Classes
+- Used animation @keyframes
+  > Used the :root pseudo-class to declare global CSS variables
+  > To make it nicer added basic animation and hovers.
+  > Added Focus-visible to navigate with TAB
 
 ### What I learned
 
