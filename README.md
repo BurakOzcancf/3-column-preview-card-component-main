@@ -1,4 +1,4 @@
-# Frontend Mentor - 3-column preview card component solution
+# 3-column preview card
 
 [3-column preview card component challenge](./design/desktop-preview.jpg)
 
