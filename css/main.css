@@ -181,7 +181,7 @@ footer {
 }
 
 footer a {
-  color: #3e52a3;
+  color: var(--Very-Dark-Cyan);
   text-decoration: none;
 }
 

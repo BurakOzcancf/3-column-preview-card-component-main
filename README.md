@@ -6,27 +6,18 @@
 
 - [Overview](#overview)
   - [Intro](#intro)
-  - [The challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Features](#features)
+  - [What I learned](#What-I-learned)
+  - [Author](#Author)
 
 ## Overview
 
 ### Intro
 
 Hello! This is my solution to the 3-column preview card component challenge. This challenge is from frontend mentor to make practice on frontend skills.
-
-### The Challenge
-
-- You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-- Your challenge is to build out this landing page and get it looking as close to the design as possible.
-
-- Users should be able to:
-  > View the optimal layout depending on their device's screen size
-  > See hover states for interactive elements
 
 ### Links
 
@@ -42,22 +33,29 @@ Hello! This is my solution to the 3-column preview card component challenge. Thi
 
 ### Built with
 
-- Semantic HTML5 markup
+- HTML 5
 - SCSS
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
 
 ### Features
 
+- Used the Semantic HTML to make search engines, screen readers, and other user devices determine the significance and context of web content.
+- Named as BEM methodology to write cleaner and more readable CSS classes
+- Mobile-first workflow
+- CSS flex
+- CSS grid
 - Used the :root pseudo-class to declare global CSS variables
 - used rem unit to make relative font-size to the root element
-- Named as BEM (Block\_\_Elemenet-Modifier) to write cleaner and more readable CSS classes
-- Used the Semantic HTML to make search engines, screen readers, and other user devices determine the significance and context of web content.
 - To make it nicer added basic animation and hovers.
 - Added Focus-visible to navigate with TAB
 
-## Author
+### What I learned
+
+- Semantic HTML
+- SCSS
+- BEM method
+- Handling accessibility issues
+
+### Author
 
 - Twitter - [@MyNameIsOzcan](https://twitter.com/MyNameIsOzcan)
 - GitHub- [BurakOzcancf](https://github.com/BurakOzcancf)
